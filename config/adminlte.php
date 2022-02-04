@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => 'Galapagos Luxury Charters',
+    'title_prefix' => 'GLC | ',
     'title_postfix' => '',
 
     /*
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -47,10 +47,10 @@ return [
 
     'logo' => '<b>Galapagos</b> Luxury',
     'logo_img' => 'images/brand-image-red.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img_class' => 'brand-image ',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-lg',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'GLC',
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +66,7 @@ return [
 
     'usermenu_enabled' => true,
     'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
+    'usermenu_header_class' => 'bg-danger',
     'usermenu_image' => false,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
@@ -102,7 +102,7 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
+    'classes_auth_card' => 'card-outline card-danger',
     'classes_auth_header' => '',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
@@ -127,7 +127,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-danger elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -253,87 +253,100 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],*/
-        ['header' => 'USERS'],
+        ['header' => 'ADMINISTRATION'],
         [
-            'text' => 'staff',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Reports',
+            'url'  => '#',
+            'icon' => 'far fa-fw fa-chart-bar',
         ],
         [
-            'text' => 'brokers',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'clients',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        ['header' => 'CHARTERS'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Users',
+            'icon'    => 'fas fa-fw fa-user',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Staff',
+                    'icon_color' => 'cyan',
                     'url'  => '#',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Brokers',
+                    'icon_color' => 'yellow',
+                    'url'  => '#',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Clients',
+                    'icon_color' => 'green',
                     'url'  => '#',
                 ],
             ],
         ],
+        [
+            'text' => 'Yacht',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-ship',
+        ],
+        [
+            'text' => 'Charters',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-anchor',
+        ],
+        [
+            'text' => 'Activities',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-swimmer',
+        ],
+        [
+            'text' => 'Preference Sheet',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-tasks',
+        ],
         ['header' => 'ACCOUNTING'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text' => 'Graphics',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-chart-line',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Sales',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-check-double',
         ],
         [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Bills',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-money-bill-alt',
         ],
+        [
+            'text'    => 'Commissions',
+            'icon'    => 'fas fa-fw fa-wallet',
+            'submenu' => [
+                [
+                    'text' => 'GLC',
+                    'icon_color' => 'red',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Employees',
+                    'icon_color' => 'blue',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+        [
+            'text' => 'Orders',
+            'url'  => '#',
+            'icon' => 'far fa-fw fa-folder-open',
+        ],
+        [
+            'text' => 'Holds',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-hand-holding-usd',
+        ],
+        [
+            'text' => 'APA',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-receipt',
+        ]
     ],
 
     /*

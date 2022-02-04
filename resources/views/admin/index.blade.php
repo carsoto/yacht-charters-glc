@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Reports')
 
 @section('content_header')
     <!--<h1>Listado de usuarios</h1>-->
@@ -9,7 +9,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h1>Dashboard</h1>
+        <h1>Reports</h1>
     </div>
     <div class="card-body">
         <p>Welcome to this beautiful admin panel.</p>    
