@@ -129,7 +129,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-danger elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -150,7 +150,7 @@ return [
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-light',
+    'sidebar_scrollbar_theme' => 'os-theme-dark',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
@@ -172,7 +172,7 @@ return [
     'right_sidebar_theme' => 'dark',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
-    'right_sidebar_scrollbar_theme' => 'os-theme-light',
+    'right_sidebar_scrollbar_theme' => 'os-theme-dark',
     'right_sidebar_scrollbar_auto_hide' => 'l',
 
     /*
@@ -228,7 +228,7 @@ return [
         // Navbar items:
         [
             'type'         => 'navbar-search',
-            'text'         => 'search',
+            'text'         => 'Search',
             'topnav_right' => true,
         ],
         [
@@ -258,6 +258,8 @@ return [
             'text' => 'Reports',
             'url'  => '#',
             'icon' => 'far fa-fw fa-chart-bar',
+            //'label' => 'Nuevo',
+            //'label_color' => 'danger'
         ],
         [
             'text'    => 'Users',
@@ -385,9 +387,10 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
-                [
+                /********** CONFIGURACIÓN ORIGINAL **********/
+                /*[
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
@@ -401,11 +404,77 @@ return [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
+                ],*/
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/1.11.4/js/dataTables.bootstrap4.min.js'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/buttons/2.2.2/js/buttons.bootstrap4.min.js'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/buttons/2.2.2/js/buttons.colVis.min.js'
+                ],
+                
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/buttons/2.2.2/css/buttons.bootstrap4.min.css',
                 ],
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -420,7 +489,7 @@ return [
             ],
         ],
         'Chartjs' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -430,7 +499,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -440,12 +509,12 @@ return [
             ],
         ],
         'Pace' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-center-radar.min.css',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-center-radar.min.css',
                 ],
                 [
                     'type' => 'js',
