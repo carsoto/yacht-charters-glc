@@ -348,6 +348,11 @@ return [
             'text' => 'APA',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-receipt',
+        ],
+        [
+            'text' => 'Drive',
+            'url'  => '#',
+            'icon' => 'fa-brands fa-google-drive',
         ]
     ],
 
