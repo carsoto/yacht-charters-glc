@@ -253,17 +253,19 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],*/
-        ['header' => 'ADMINISTRATION'],
+        ['header' => 'ADMINISTRATOR', 'can' => 'admin.reports'],
         [
             'text' => 'Reports',
             'url'  => '#',
             'icon' => 'far fa-fw fa-chart-bar',
+            'can' => 'admin.reports'
             //'label' => 'Nuevo',
             //'label_color' => 'danger'
         ],
         [
             'text'    => 'Users',
             'icon'    => 'fas fa-fw fa-user',
+            'can' => 'admin.users.index',
             'submenu' => [
                 [
                     'text' => 'Staff',
@@ -283,44 +285,52 @@ return [
             ],
         ],
         [
-            'text' => 'Yacht',
+            'text' => 'Yachts',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-ship',
+            'can' => 'admin.yachts.index'
         ],
         [
             'text' => 'Charters',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-anchor',
+            'can' => 'admin.cherters.index'
         ],
         [
             'text' => 'Activities',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-swimmer',
+            'can' => 'admin.activities.index'
         ],
         [
-            'text' => 'Preference Sheet',
+            'text' => 'Preference Sheets',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-tasks',
+            'can' => 'admin.preference_sheets.index'
         ],
-        ['header' => 'ACCOUNTING'],
+        ['header' => 'ACCOUNTING', 'can' => 'admin.graphics'],
         [
             'text' => 'Graphics',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-chart-line',
+            'can' => 'admin.graphics'
         ],
         [
             'text' => 'Sales',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-check-double',
+            'can' => 'admin.sales.index'
         ],
         [
             'text' => 'Bills',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-money-bill-alt',
+            'can' => 'admin.bills.index'
         ],
         [
             'text'    => 'Commissions',
             'icon'    => 'fas fa-fw fa-wallet',
+            'can' => 'admin.commissions.index',
             'submenu' => [
                 [
                     'text' => 'GLC',
@@ -338,22 +348,28 @@ return [
             'text' => 'Orders',
             'url'  => '#',
             'icon' => 'far fa-fw fa-folder-open',
+            'can' => 'admin.orders.index'
         ],
         [
             'text' => 'Holds',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-hand-holding-usd',
+            'can' => 'admin.holds.index'
         ],
         [
             'text' => 'APA',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-receipt',
+            'can' => 'admin.apa.index'
         ],
         [
             'text' => 'Drive',
             'url'  => '#',
-            'icon' => 'fa-brands fa-google-drive',
-        ]
+            'icon' => 'fab fa-google-drive',
+            'can' => 'admin.drive'
+        ],
+        ['header' => 'BROKER', 'can' => 'admin.reports'],
+        ['header' => 'CLIENT', 'can' => 'admin.reports'],
     ],
 
     /*

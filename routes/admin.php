@@ -15,4 +15,17 @@ use App\Http\Controllers\Admin\GeneralController;
 |
 */
 
-Route::get('/',  [GeneralController::class, 'index']);
+Route::get('/',  [GeneralController::class, 'index'])->name('admin.reports');//->middleware('role:administrator');
+//Route::resource('reports', '')->name('admin.reports');
+//Route::resource('users', '')->name('admin.users');
+//Route::resource('yachts', '')->name('admin.yachts');
+//Route::resource('charters', '')->name('admin.charters');
+//Route::resource('activities', '')->name('admin.activities');
+//Route::resource('preference_sheets', '')->name('admin.preference_sheets');
+//Route::resource('graphics', '')->name('admin.graphics');
+//Route::resource('sales', '')->name('admin.sales');
+//Route::resource('bills', '')->name('admin.bills');
+//Route::resource('commissions', '')->name('admin.commissions');
+//Route::resource('orders', '')->name('admin.orders');
+//Route::resource('holds', '')->name('admin.holds');
+//Route::resource('apa', '')->name('admin.apa');
