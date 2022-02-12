@@ -20,7 +20,7 @@ class RoleSeeder extends Seeder
         $b = Role::create(['name' => "broker"]);
         $c = Role::create(['name' => "client"]);
 
-        Permission::create(['name' => 'admin.reports'])->syncRoles([$a, $b, $c]);
+        Permission::create(['name' => 'admin.index'])->assignRole($a);
         
         Permission::create(['name' => 'admin.users.index'])->assignRole($a);
         Permission::create(['name' => 'admin.users.create'])->assignRole($a);
@@ -81,5 +81,8 @@ class RoleSeeder extends Seeder
 
         
         Permission::create(['name' => 'admin.drive'])->assignRole($a);
+
+        Permission::create(['name' => 'broker.index'])->assignRole($b);
+        Permission::create(['name' => 'client.index'])->assignRole($c);
     }
 }

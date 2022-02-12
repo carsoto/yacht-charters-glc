@@ -253,12 +253,12 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],*/
-        ['header' => 'ADMINISTRATOR', 'can' => 'admin.reports'],
+        ['header' => 'ADMINISTRATOR', 'can' => 'admin.index'],
         [
             'text' => 'Reports',
             'url'  => '#',
             'icon' => 'far fa-fw fa-chart-bar',
-            'can' => 'admin.reports'
+            'can' => 'admin.index'
             //'label' => 'Nuevo',
             //'label_color' => 'danger'
         ],
@@ -368,8 +368,8 @@ return [
             'icon' => 'fab fa-google-drive',
             'can' => 'admin.drive'
         ],
-        ['header' => 'BROKER', 'can' => 'admin.reports'],
-        ['header' => 'CLIENT', 'can' => 'admin.reports'],
+        ['header' => 'BROKER', 'can' => 'broker.index'],
+        ['header' => 'CLIENT', 'can' => 'client.index'],
     ],
 
     /*
