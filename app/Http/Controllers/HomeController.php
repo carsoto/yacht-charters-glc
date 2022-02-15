@@ -25,15 +25,15 @@ class HomeController extends Controller
     public function index()
     {
         if(Auth::user()->hasRole('administrator')) {
-            return redirect('/administrator');
+            return view('admin.index');
         }
 
         else if(Auth::user()->hasRole('broker')) {
-            return redirect('/broker');
+            return view('broker.index');
         }
         
         else if(Auth::user()->hasRole('client')) {
-            return redirect('/client');
+            return view('client.index');
         }
 
         else {
