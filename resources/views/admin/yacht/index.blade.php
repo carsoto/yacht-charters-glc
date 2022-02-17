@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Reports')
+@section('title', 'Yacht')
 
 @section('content_header')
     <!--<h1>Listado de usuarios</h1>-->
@@ -10,7 +10,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h1>ADMIN <div class="float-right text-xl"><a class="dt_actions"><i class="fas fa-plus"></i></a></div></h1>
+        <h1>YACHT <div class="float-right text-xl"><a class="dt_actions"><i class="fas fa-plus"></i></a></div></h1>
     </div>
     <div class="card-body">
         <div class="row">
