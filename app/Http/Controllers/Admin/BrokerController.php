@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Admin\Yacht;
+use App\Models\Admin\Broker;
 use Illuminate\Http\Request;
 
-class YachtController extends Controller
+class BrokerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,17 +15,8 @@ class YachtController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $brokers = Broker::all();
+        return response()->json($brokers);
     }
 
     /**
@@ -36,51 +27,43 @@ class YachtController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $broker = Broker::create($request->post());
+        return response()->json(['broker' => $broker]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Admin\Yacht  $yacht
+     * @param  \App\Models\Admin\Broker  $broker
      * @return \Illuminate\Http\Response
      */
-    public function show(Yacht $yacht)
+    public function show(Broker $broker)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Admin\Yacht  $yacht
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Yacht $yacht)
-    {
-        //
+        return response()->json($broker);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Admin\Yacht  $yacht
+     * @param  \App\Models\Admin\Broker  $broker
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Yacht $yacht)
+    public function update(Request $request, Broker $broker)
     {
-        //
+        $broker->fill($request->post())->save();
+        return response()->json(['broker' => $broker]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Admin\Yacht  $yacht
+     * @param  \App\Models\Admin\Broker  $broker
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Yacht $yacht)
+    public function destroy(Broker $broker)
     {
-        //
+        $blog->delete();
+        return response()->json(['msg' => 'Broker deleted']);
     }
 }
