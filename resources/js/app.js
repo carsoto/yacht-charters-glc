@@ -1,7 +1,10 @@
-require('./bootstrap');
+require('./bootstrap')
 
-import Alpine from 'alpinejs';
+import { createApp } from 'vue'
+import HelloWorld from './components/ExampleComponent'
 
-window.Alpine = Alpine;
+const app = createApp({})
 
-Alpine.start();
+app.component('hello-world', HelloWorld)
+
+app.mount('#app')
