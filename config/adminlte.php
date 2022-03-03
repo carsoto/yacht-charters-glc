@@ -256,7 +256,7 @@ return [
         ['header' => 'ADMINISTRATOR', 'can' => 'admin.index'],
         [
             'text' => 'Reports',
-            'url'  => '#',
+            'url'  => 'admin/reports',
             'icon' => 'far fa-fw fa-chart-bar',
             'can' => 'admin.index'
             //'label' => 'Nuevo',

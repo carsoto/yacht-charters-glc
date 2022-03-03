@@ -15,7 +15,7 @@ use App\Http\Controllers\Admin\GeneralController;
 |
 */
 
-Route::get('/',  [GeneralController::class, 'index'])->name('admin.reports');//->middleware('role:administrator');
+Route::get('/reports',  [GeneralController::class, 'index'])->name('admin.reports');//->middleware('role:administrator');
 //Route::resource('reports', '')->name('admin.reports');
 //Route::resource('users', '')->name('admin.users');
 //Route::resource('yachts', '')->name('admin.yachts');
