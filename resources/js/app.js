@@ -1,10 +1,12 @@
 require('./bootstrap')
 
 import { createApp } from 'vue'
-import HelloWorld from './components/ExampleComponent'
+import ExampleComponent from './components/ExampleComponent'
+import ReportsComponent from './components/admin/reports/MainComponent'
 
 const app = createApp({})
 
-app.component('hello-world', HelloWorld)
+app.component('example-component', ExampleComponent)
+app.component('reports-component', ReportsComponent)
 
 app.mount('#app')

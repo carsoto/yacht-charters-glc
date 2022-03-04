@@ -33,7 +33,9 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "chart.js": "^3.7.1",
         "node-gyp": "^9.0",
+        "vue3-chart-v2": "^0.8.3",
         "webpack": "^5.68.0"
     }
 }
