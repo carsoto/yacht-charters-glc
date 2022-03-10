@@ -29,11 +29,11 @@ class HomeController extends Controller
         }
 
         else if(Auth::user()->hasRole('broker')) {
-            return view('broker.index');
+            return view('admin.client.index');
         }
         
         else if(Auth::user()->hasRole('client')) {
-            return view('client.index');
+            return view('charter.index');
         }
 
         else {

@@ -79,6 +79,11 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'admin.apa.update'])->assignRole($a);
         Permission::create(['name' => 'admin.apa.destroy'])->assignRole($a);
 
+        Permission::create(['name' => 'admin.contracts.index'])->assignRole($a);
+        Permission::create(['name' => 'admin.contracts.create'])->assignRole($a);
+        Permission::create(['name' => 'admin.contracts.update'])->assignRole($a);
+        Permission::create(['name' => 'admin.contracts.destroy'])->assignRole($a);
+
         
         Permission::create(['name' => 'admin.drive'])->assignRole($a);
 

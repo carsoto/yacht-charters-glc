@@ -17,9 +17,9 @@ class CreateBrokersTable extends Migration
             $table->bigIncrements('id');
             $table->string('full_name');
             $table->string('email');
-            $table->string('company');
-            $table->string('phone');
-            $table->integer('percentage');
+            $table->string('company')->nullable();
+            $table->string('phone')->nullable();
+            $table->integer('percentage')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

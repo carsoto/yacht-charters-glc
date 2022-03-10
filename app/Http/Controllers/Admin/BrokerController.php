@@ -63,7 +63,7 @@ class BrokerController extends Controller
      */
     public function destroy(Broker $broker)
     {
-        $blog->delete();
+        $broker->delete();
         return response()->json(['msg' => 'Broker deleted']);
     }
 }

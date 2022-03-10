@@ -270,17 +270,17 @@ return [
                 [
                     'text' => 'Staff',
                     'icon_color' => 'cyan',
-                    'url'  => '#',
+                    'url'  => 'admin/users/staff',
                 ],
                 [
                     'text' => 'Brokers',
                     'icon_color' => 'yellow',
-                    'url'  => '#',
+                    'url'  => 'admin/users/broker',
                 ],
                 [
                     'text' => 'Clients',
                     'icon_color' => 'green',
-                    'url'  => '#',
+                    'url'  => 'admin/users/client',
                 ],
             ],
         ],
@@ -307,6 +307,12 @@ return [
             'url'  => '#',
             'icon' => 'fas fa-fw fa-tasks',
             'can' => 'admin.preference_sheets.index'
+        ],
+        [
+            'text' => 'Contracts',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-file-contract',
+            'can' => 'admin.contracts.index'
         ],
         ['header' => 'ACCOUNTING', 'can' => 'admin.graphics'],
         [
@@ -364,7 +370,8 @@ return [
         ],
         [
             'text' => 'Drive',
-            'url'  => '#',
+            'url'  => 'https://drive.google.com/drive/folders/1SX84eANRC6n_hrxs8FlL0gGtgNPDtaCB?usp=sharing',
+            'target' => '_blank',
             'icon' => 'fab fa-google-drive',
             'can' => 'admin.drive'
         ],

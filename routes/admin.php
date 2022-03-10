@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\GeneralController;
+use App\Http\Controllers\Admin\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,8 +17,13 @@ use App\Http\Controllers\Admin\GeneralController;
 */
 
 Route::get('/reports',  [GeneralController::class, 'index'])->name('admin.reports');//->middleware('role:administrator');
+Route::group(['prefix' => 'users'], function() {
+    Route::get('staff', [UserController::class, 'staff'])->name('admin.users.staff');
+    Route::get('broker', [UserController::class, 'broker'])->name('admin.users.broker');
+    Route::get('client', [UserController::class, 'client'])->name('admin.users.client');
+});
 //Route::resource('reports', '')->name('admin.reports');
-//Route::resource('users', '')->name('admin.users');
+
 //Route::resource('yachts', '')->name('admin.yachts');
 //Route::resource('charters', '')->name('admin.charters');
 //Route::resource('activities', '')->name('admin.activities');
