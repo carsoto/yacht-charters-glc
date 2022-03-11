@@ -229,7 +229,7 @@ return [
         [
             'type'         => 'navbar-search',
             'text'         => 'Search',
-            'topnav_right' => true,
+            'topnav_right' => false,
         ],
         [
             'type'         => 'fullscreen-widget',
@@ -314,6 +314,19 @@ return [
             'icon' => 'fas fa-fw fa-file-contract',
             'can' => 'admin.contracts.index'
         ],
+        [
+            'text'    => 'Charter Logistic',
+            'icon'    => 'fas fa-fw fa-user',
+            'can' => 'admin.users.index',
+            'submenu' => [
+                [
+                    'text' => 'APA',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-receipt',
+                    'can' => 'admin.apa.index'
+                ],
+            ],
+        ],
         ['header' => 'ACCOUNTING', 'can' => 'admin.graphics'],
         [
             'text' => 'Graphics',
@@ -361,12 +374,6 @@ return [
             'url'  => '#',
             'icon' => 'fas fa-fw fa-hand-holding-usd',
             'can' => 'admin.holds.index'
-        ],
-        [
-            'text' => 'APA',
-            'url'  => '#',
-            'icon' => 'fas fa-fw fa-receipt',
-            'can' => 'admin.apa.index'
         ],
         [
             'text' => 'Drive',

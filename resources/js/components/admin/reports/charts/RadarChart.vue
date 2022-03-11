@@ -9,10 +9,12 @@ export default defineComponent({
       state: {
         chartData: {
           labels: ["Running", "Swimming", "Eating", "Cycling"],
+          
           datasets: [
             {
               label: "Human 1",
               data: [20, 10, 4, 2],
+              backgroundColor: '#f87979',
             },
             {
               label: "Human 2",
